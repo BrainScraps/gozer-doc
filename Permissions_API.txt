@@ -1,0 +1,50 @@
+GET		https://[domain]/permissions/
+		Returns all possible permisisons (features)
+
+GET		https://[domain]/permissions/[producerid]/
+		Returns all possible permissions for a producer
+
+GET 	https://[domian]/permissions/class/[classid]/
+		Returns all possible permissions for a class
+
+GET		https://[domain]/permissions/[producrerid]/[featureid]/
+		Returns 1 if prducer is allowed feature, 0 otherwise.
+
+GET		https://[domain]/offers/current/
+		Returns all current offers.
+
+GET		https://[domain]/offers/details/[offerid]/
+
+GET		https://[domain]/offers/producer/[producerid]/
+		Returns offer of a producer.
+
+GET		https://[domain]/class/[classid]/
+		Returns
+
+GET		https://[domain]/feature/[featureid]
+		Returns details of feature
+
+POST	https://[domain]/class/
+		name = [name] & description = [description]
+		Creates new class. Returns classid
+
+PUT		https://[domain]/class/[classid]
+		featureid = [featureid]
+		Ads feature to class.
+
+POST	https://[domain]/offers/
+		name = [name], description = [description], classid = [classid], startdate = [startdate], enddate = [enddate], price = [price]
+		Creates new offer. Returns offerid
+
+PUT		https://[domain]/offers/offerid
+		[updatedfield] = [updatedvalue]
+		Updates an offer.
+
+POST	https://[domain]/producer/
+		classid = [classid]
+		Creates new producer. Returns producerid.
+
+PUT		https://[domain]/prducer/
+		producerid = [producerid], classid = [classid]
+		Updates a producer's
+
