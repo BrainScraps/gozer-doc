@@ -48,3 +48,4 @@ PUT		https://[domain]/prducer/
 		producerid = [producerid], classid = [classid]
 		Updates a producer's
 
+PUT ISAAC!
