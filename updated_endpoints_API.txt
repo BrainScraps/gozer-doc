@@ -1,0 +1,50 @@
+First Round:
+GET             https://[domain]/permissions/[producer_id]/
+                Returns all possible permissions for a producer
+
+GET             https://[domain]/permissions/[producer_id]/[featureid]/
+                Returns 1 if producer is allowed feature, 0 otherwise.
+
+GET             https://[domain]/assortment/[assortmentid]/
+                Returns features that belong to a specific assortment
+
+POST            https://[domain]/producer/assortmentid = [assortmentid]
+                Creates new producer with an assortment id. Returns producer object with a status code.
+
+PUT             https://[domain]/producer/producer_id = [producerid], assortment_id = [assortment_id]
+                Updates a producer's assortment selection. Returns new producer object with a status code.
+
+
+example producer object:
+  {"producer_id" => 1, "name"=>"Danny", "description"=>"the best guy", "assortment_id"=>"1"}
+
+Needs Clarification:
+GET             https://[domain]/feature/[featureid]
+                  Returns details of feature
+
+GET         https://[domian]/permissions/assortment/[assortmentid]/
+                Returns all possible permissions for a assortment
+                
+GET                https://[domain]/offers/current/
+                Returns all current offers.
+
+GET                https://[domain]/offers/details/[offerid]/
+
+GET                https://[domain]/offers/producer/[producerid]/
+                Returns offer of a producer.
+
+POST        https://[domain]/assortment/name = [name] & description = [description]
+                Creates new assortment. Returns assortmentid
+
+PUT             https://[domain]/assortment/[assortmentid]/featureid = [featureid]
+                Adds feature to assortment.
+
+POST        https://[domain]/offers/name = [name], description = [description], assortmentid = [assortmentid], startdate = [startdate], enddate = [enddate], price = [price]
+                Creates new offer. Returns offerid
+
+PUT                https://[domain]/offers/offerid
+                [updatedfield] = [updatedvalue]
+                Updates an offer.
+
+GET             https://[domain]/permissions/
+                Returns all possible permissions (features)
